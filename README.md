@@ -25,7 +25,7 @@ List starred repositories of a user on the fly, but index repositories
 
 ### Searching
 
-Search for a specific keyword in the index
+Search for a specific word in the index and show repositories
 
     strgz search vim
 
