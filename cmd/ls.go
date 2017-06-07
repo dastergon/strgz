@@ -25,6 +25,7 @@ repositories that have starred themselves or from other Github users.`,
 		if len(args) < 1 {
 			log.Fatalln("Please specify a user to search for.")
 		}
+
 		user := args[0]
 		isIndex, _ := cmd.Flags().GetBool("index")
 		isUrl, _ := cmd.Flags().GetBool("url")
@@ -44,12 +45,14 @@ repositories that have starred themselves or from other Github users.`,
 				break
 			}
 		}
+
 		if isIndex {
 			index, err = lib.BleveIndex("starred.bleve")
 			if err != nil || index == nil {
 				log.Fatalln("Bleve index failure\n", err)
 			}
 		}
+
 		for _, repo := range starredRepos {
 			if isIndex {
 				err = lib.Index(repo.Repository, index)
@@ -72,7 +75,6 @@ repositories that have starred themselves or from other Github users.`,
 					fmt.Printf("(%s)", *repo.Repository.Language)
 				}
 				fmt.Printf("\n\t%s\n", *repo.Repository.HTMLURL)
-
 			}
 		}
 	},

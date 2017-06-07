@@ -17,15 +17,19 @@ repositories that have starred themselves or from other Github users.`,
 		if len(args) < 1 {
 			log.Fatalln("Please specify a word to search for.")
 		}
+
 		word := args[0]
+
 		index, err := lib.BleveIndex("starred.bleve")
 		if err != nil || index == nil {
 			log.Fatalln("Bleve index failure\n", err)
 		}
+
 		results, err := lib.SearchIndex(word, index)
 		if err != nil {
 			log.Fatalln("Index search failed\n", err)
 		}
+
 		lib.ShowResults(results, index)
 	},
 }
