@@ -1,7 +1,7 @@
 # strgz
-strgz is a CLI tool for Github that enables users to list, index and search starred repositories from their Github account or others' account.
+strgz is a CLI tool for Github that enables users to list, index and search starred repositories from their own Github account or others' account.
 
-strgz indexes the starred repositories and enables fast search of the repositories. It uses the [Bleve](http://www.blevesearch.com/) indexing library to index all starred repositories and the [go-github](https://github.com/google/go-github) library to interact with the Github API. strgz comes in handy to users with thousands of starred repositories.
+strgz comes in handy to users with thousands of starred repositories. strgz indexes the starred repositories and enables fast searching capabilities of the repositories. It uses the [Bleve](http://www.blevesearch.com/) indexing library to index all starred repositories and the [go-github](https://github.com/google/go-github) library to interact with the Github API. 
 
 ## Installation
 
